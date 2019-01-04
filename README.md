@@ -32,6 +32,11 @@ For this model is necessary to have a table called "admin" with this properties:
 | user           | varchar(255)   | No     |             | NULL     |                                  |
 | pass           | varchar(255)   | No     |             | NULL     |                                  |
 
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
 To edit this model and the necessary properties, edit the file in `back/model/admin.js`, where is defined this model.
 
 
