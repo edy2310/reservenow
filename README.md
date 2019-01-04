@@ -39,17 +39,18 @@ To edit this model and the necessary properties, edit the file in `back/model/ad
 
 The reservation model is used to save all the reservations
 For this model is necessary to have a table called "reservations" with this properties:
-| Field                        | Type               | Null   | Key       | Default | Extra                          |
-| ---              | ---             | ---| ---  | ---    | ---                  |
-| ID                             | int(11)            | No     | PRI       | NULL     | auto_increment        |
-| name                       | varchar(255)   | No     |             | NULL     |                                  |
-| secondName           | varchar(255)   | No     |             | NULL     |                                  |
-| numberPersons       | int(11)             | No     |             | NULL     |                                  |
-| email                       | varchar(255)   | No     |             | NULL     |                                  |
-| phone                      | varchar(255)   | No     |             | NULL     |                                  |
-| date                         | varchar(300)   | No     |             | NULL     |                                  |
-| time                         | varchar(300)   | No     |             | NULL     |                                  |
-| specialRequest        | varchar(500)   | No     |             | NULL     |                                  |
+
+| Field  | Type | Null  | Key | Default  | Extra |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| id  | int(11)    | No  | PRI  | NULL  | auto_increment |    
+| name  | varchar(255)   | No  |   | NULL  |  |    
+| secondName  | varchar(255)   | No  |   | NULL  |  |    
+| numberPersons  | int(11)   | No  |   | NULL  |  |    
+| email  | varchar(255)   | No  |   | NULL  |  |    
+| phone  | varchar(255)   | No  |   | NULL  |  |    
+| date  | varchar(300)   | No  |   | NULL  |  |    
+| time  | varchar(300)   | No  |   | NULL  |  |    
+| specialRequest  | varchar(500)   | No  |   | NULL  |  |   
 
 To edit this model and the necessary properties, edit the file in `back/model/reservation.js`, where is defined this model.
 
