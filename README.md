@@ -33,7 +33,7 @@ For this model is necessary to have a table called "admin" with this properties:
 | pass           | varchar(255)   | No     |             | NULL     |                                  |
 
 | Field  | Type | Null  | Key | Default  | Extra |
-| ------------- | ------------- |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | id  | int(11)    | No  | PRI  | NULL  | auto_increment |    
 | user  | varchar(255)   |
 | pass  | varchar(255)   |
