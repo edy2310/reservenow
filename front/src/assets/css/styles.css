@@ -1,0 +1,52 @@
+.timepicker table {
+    display: flex;
+    justify-content: center;
+}
+@media (min-width: 768px){
+    .modal-dialog {
+        max-width: 700px !important;
+    }
+    .modal-dialog .second{
+        max-width: 50% !important;
+    }
+}
+
+@media screen and (max-width:985px){
+    .bs-chevron{
+        width: 2rem !important;
+        height: 2rem !important;
+    }
+    .bs-timepicker-field {
+        width: 3em !important;
+    }
+    tbody .form-control{
+        height: calc(7.25rem + 2px) !important;
+        font-size: 3rem;
+    }
+    .btn.disabled, .btn:disabled {
+        font-size: 3.7rem !important;
+    }
+    .modal-dialog {
+        max-width: 95% !important;
+    }
+    .bs-datepicker-head{
+        width: 620px !important;
+        height: 100px !important;
+    }
+    .bs-datepicker-head{
+        font-size: 3.5em !important;
+    }
+    .bs-datepicker-head button.next span, .bs-datepicker-head button.previous span{
+        font-size: 2em !important;
+        line-height: 0 !important;
+    }
+    h4.modal-title.pull-left {
+        font-size: 4em;
+    }
+    .modal-header .close{
+        font-size: 5em;
+    }
+    .modal-content{
+        height: 80vh;
+    }
+}

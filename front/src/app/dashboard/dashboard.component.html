@@ -1,0 +1,57 @@
+<nav class="nav-bar">
+    <div class="title"><h1>Dashboard</h1></div>
+    <div class="menu">
+        Admin <i class="fas fa-angle-down"></i>
+        <ul>
+            <li><button (click)="killSession()">Close session  <i class="fas fa-sign-out-alt"></i></button></li>
+        </ul>
+    </div>
+
+    <div class="menu-mobile">
+        <span (click)="openNav()">&#9776; </span>
+      </div>
+    
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+        <ul>
+            <li><a (click)="killSession()">Close session  <i class="fas fa-sign-out-alt"></i></a></li>
+        </ul>
+      </div>  
+</nav>
+
+<!--div class="main-bar">
+    <div class="search-bar">
+        <label for="date">Serach:</label>
+        <input type="text" name="selectedDate" id="selectedDate" [(ngModel)]="selectedDate" bsDatepicker autocomplete="off"
+        placeholder="Date">
+    </div>
+    <div class="today">
+        <button (click)="showToday()">Today</button>
+    </div>
+</div-->
+
+<div class="reservations-table">
+    <div class="loagingGif"><img src="/assets/img/loading.gif" alt="Loading" [ngStyle]="loadingGif"></div>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Hour</th>
+            <th>Number of Persons</th>
+            <th>Email</th>
+            <th>Phone number</th>
+            <th>Special Request</th>
+            <th>Delete</th>
+        </tr>
+        <tr *ngFor="let reservartion of data; let i=index" class="table-content">
+            <td>{{reservartion.name}} {{reservartion.secondName}}</td>
+            <td>{{reservartion.stringDate}}</td>
+            <td>{{reservartion.stringTime}}</td>
+            <td>{{reservartion.numberPersons}}</td>
+            <td>{{reservartion.email}}</td>
+            <td>{{reservartion.phone}}</td>
+            <td>{{reservartion.specialRequest}}</td>
+            <td class="delete" (click)="confirmDeleteReservation(reservartion.id)"><i class="fas fa-trash"></i></td>
+        </tr>
+    </table>
+</div>

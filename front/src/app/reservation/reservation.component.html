@@ -1,0 +1,100 @@
+<div class="reservation-banner">
+  <img src="/assets/img/logo.png" alt="Logo">
+  <h1>ReserveNow!</h1>
+  <h4>157th Place Northeast, Redmond, Washington</h4>
+  <h5>House - Bar - Hotel - Boutique</h5>
+</div>
+ 
+<div class="reservation-main">
+  <h1>Make a reservation</h1> 
+  <form #formulario="ngForm">
+    <div class="">
+      <select id="persons" name="persons" [(ngModel)]="persons" required >
+        <option  [ngValue]="undefined" hidden>Number of Persons</option>
+        <option *ngFor="let item of numberOfPersonsArr" value="{{item}}">{{item}}</option>
+      </select>
+    </div>  
+
+    <div class="">
+      <input type="text" name="date" id="date" [(ngModel)]="date" bsDatepicker [minDate]="minDate" autocomplete="off"
+        placeholder="Date">
+    </div>
+
+    <div id="time-block"> 
+      <label for="time">Hour:</label>
+      <timepicker class="timepicker" [(ngModel)]="time" name="time" [minuteStep]="mstep" [min]="minTime" [max]="maxTime"></timepicker>
+    </div>
+
+    <alert type="danger" class="bt-alert" [ngStyle]="alertStyle">
+        {{alertMsg}}
+    </alert>
+
+    <button (click)="openModal(template)">Reserve Now!</button>
+  </form>
+</div>
+
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Who is this reservation for?</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body first-modal_form">
+      <form action="">
+            <input type="text" name="name" id="name" [(ngModel)]="name" placeholder="Name:*" required  autocomplete="off">
+            <input type="text" name="secName" id="secName" [(ngModel)]="secName" placeholder="Second Name:*" required>
+            <input type="email" name="email" id="email" [(ngModel)]="email" placeholder="Email:*" required>
+            <input type="phoneNumber" name="phoneNumber" id="phoneNumber" [(ngModel)]="phoneNumber" placeholder="Phone number:*" required>
+            <textarea name="addInfo" id="addInfo" [(ngModel)]="addInfo" cols="30" rows="4" placeholder="Any special request?"></textarea>
+      </form>
+  </div>
+  <alert type="danger" class="bt-alert" [ngStyle]="alertStyle2">
+    {{alertMsg2}}
+</alert>
+  <button type="button" class="btn btn-primary" (click)="openModal2(templateNested)" id="continueBtn">Continue</button>
+</ng-template>
+
+<ng-template #templateNested>
+  <div [ngStyle]="modalConfirmation" class="modalConfirmation">
+    <div class="modal-header">
+      <h4 class="modal-title pull-left">Is everything ok?</h4>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef2.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body second-modal_form">
+      <div><strong>This reservation is for:</strong> {{secName}} {{name}}</div>
+      <table border="1">
+          <tr>
+            <td><strong> Number of persons:</strong></td>
+            <td>{{persons}}</td>
+          </tr>
+          <tr>
+            <td><strong>Date:</strong></td>
+            <td>{{dateArr[0]}} {{dateArr[1]}} {{dateArr[2]}} {{dateArr[3]}}</td>
+          </tr>
+          <tr>
+            <td><strong>Hour:</strong></td>
+            <td>{{timeArr[0]}}:{{timeArr[1]}}</td>
+          </tr>
+          <tr>
+            <td><strong>Email: </strong></td>
+            <td>{{email}}</td>
+          </tr>
+          <tr>
+            <td><strong>Phone number: </strong></td>
+            <td>{{phoneNumber}}</td>
+          </tr>
+          <tr>
+            <td><strong>Special request: </strong></td>
+            <td>{{addInfo}}</td>
+          </tr>
+        </table>
+    </div>
+    <button type="button" class="btn btn-primary" (click)="sendData();" id="confirmBtn">Confirm</button>
+</div>
+<alert type="{{finalMsgModalType}}" class="bt-succes" [ngStyle]="confirmationMsg">
+    {{finalMsgModalText}}
+</alert>
+</ng-template>

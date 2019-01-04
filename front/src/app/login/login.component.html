@@ -1,0 +1,17 @@
+<main>
+  <div class="container">
+    <div class="title">Welcome</div>
+    <div class="ico"><img src="/assets/img/ico/login.png" alt="Icon"></div>
+    <div class="form">
+      <form (ngSubmit)="login(formulario.value)" #formulario="ngForm">
+        <div class="form-container">
+          <input type="text" name="user" id="user" placeholder="User:" ngModel>
+          <input type="password" name="pass" id="pass" placeholder="Password:" ngModel>
+          <button type="submit">Login</button>
+        </div>
+      </form>
+      <img src="/assets/img/loading.gif" alt="Loading" [ngStyle]="loadingGif" id="login-loading">
+      <label [ngStyle]="labelStyle">{{msgLogin}}</label>
+    </div> 
+  </div>
+</main>

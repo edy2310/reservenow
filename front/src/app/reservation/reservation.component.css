@@ -1,0 +1,233 @@
+.reservation-main, .reservation-banner{
+    font-family: 'Poppins', sans-serif;
+}
+
+.reservation-banner{
+    text-align: center;
+    background: #348F50;
+    background: -webkit-linear-gradient(to right, #56B4D3, #348F50);
+    background: linear-gradient(to right, #56B4D3, #348F50);
+    background-position: center center;
+    background-size: cover;
+    padding: 1em 0;
+    color: white;
+    font-size: 2em;
+}
+
+.reservation-banner h1 {
+    margin-bottom: 0.5rem;
+}
+
+.reservation-banner h4 {
+    font-size: 1.1rem;
+}
+
+.reservation-banner h5 {
+    font-size: 0.8rem;
+}
+
+.reservation-banner img {
+    max-width: 30px;
+}
+
+.reservation-main{
+    text-align: center;
+    margin-top: 2em;
+}
+
+.reservation-main h1{
+    margin-bottom: 0.5em;
+}
+
+.reservation-main form div {
+    display: inline;
+}
+
+.reservation-main button{ 
+    display: inline;
+    width: 25%;
+    border: none;
+    background: #068eeb;
+    color: white;
+    font-size: 1.1em;
+    padding: 0.5em 3em;
+    margin: 3em 1em;
+    margin-top: 2em;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: 0.5s ease 0s;
+}
+
+.reservation-main button:hover{
+    background: #066db3;
+}
+
+#confirmBtn{
+    width: 100%;
+    font-size: 1.1em;
+    padding-bottom: 10px;
+    border-radius: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+#persons, #date{
+    height: 30px;
+    text-align: center;
+}
+
+#date{
+    cursor: pointer;
+}
+
+#date::placeholder {
+    color: black;
+}
+
+.reservation-main timepicker table{
+    display: inline;
+}
+
+.first-modal_form input, .first-modal_form textarea {
+    margin: 1em;
+    border: none;
+    border-bottom: solid 1px #333333;
+    color: #333333;
+    font-family: 'Poppins', sans-serif;
+}
+
+.first-modal_form input:focus, .first-modal_form textarea:focus {
+    outline: none;
+}
+
+
+.first-modal_form input {
+    width: 40%;
+}
+
+.first-modal_form input::placeholder{
+    color: #9e9e9e;
+}
+
+.first-modal_form textarea {
+    width: 80%;
+}
+
+#time-block{
+    display: block;
+    margin-top: 2em;
+}
+
+.bt-alert{
+    display: flex;
+    justify-content: center;
+    margin-top: -3em;
+    transition: 0.5s ease 0s;
+    opacity: 0;
+}
+
+.second-modal_form{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+}
+
+.second-modal_form div {
+    margin-bottom: 0.7rem;
+}
+
+td{
+    padding: 10px;
+}
+
+.finalMsgModal{
+    display: flex;
+    justify-content: center;
+}
+
+.finalMsgModal img{
+    position: absolute;
+    top: 0;
+    max-width: 100%;    
+    max-height: 100%;
+    display: none;
+    opacity: 0;
+}
+
+.bt-succes{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    bottom: 50px;
+    opacity: 0;
+    transition: 0.5s ease 0s;
+    font-weight: bolder;
+}
+
+@media screen and (max-width:985px){
+    .reservation-banner h1 {
+        font-size: 2.3em;
+    }
+    .reservation-banner img {
+        display: none;
+    }
+    .reservation-banner h4 {
+        font-size: 1.3em;
+        margin: 0.5em 1em;
+    }
+    .reservation-banner h5 {
+        font-size: 1.9rem;
+    }
+    .reservation-main h1{
+        font-size: 5em;
+        margin-bottom: 1.5em;
+    }
+    #persons, #date{
+        height: 95px;
+        width: 70%;
+        font-size: 2.5em;
+        margin-bottom: 1em;
+        border: #333333 solid 2px;
+    }
+    #date::placeholder{
+        text-align: left;
+    }
+    option{
+        font-size: 1.3rem;
+    }
+    #time-block{
+        font-size: 4em;
+        margin-top: 0;
+    }
+    .reservation-main button{
+        font-size: 2.7em;
+        margin: 0;
+        margin-top: 7.5em;
+        width: 70%;
+    }
+    .bt-alert{
+        font-size: 2.5em;
+        margin-bottom: -3em;
+    }
+    .first-modal_form input {
+        width: 95%;
+        font-size: 3em;
+    }
+    .first-modal_form textarea {
+        font-size: 3em;
+    }
+    #continueBtn{
+        font-size: 3em;
+        z-index: 20000;
+    }
+    .second-modal_form div {
+        font-size: 3em;
+        margin-bottom: 1em;
+    }
+    td{
+        font-size: 2.2em;
+    }
+    #confirmBtn{
+        font-size: 3em;
+        margin-top: 2em;
+    }
+}
