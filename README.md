@@ -27,7 +27,7 @@ To test the DB connection, import the sequelize object from `back/bin/db_connect
 The admin model is used to sign in into the dashboard
 For this model is necessary to have a table called "admin" with this properties:
 | Field          | Type               | Null   | Key       | Default | Extra                         |
-| :----------- | :------             | :------| :-------  | :------    | :----------                |
+| ----------- | ------             |------| ------  | ------    | ----------                |
 | id               | int(11)            | No     | PRI       | NULL     | auto_increment        |
 | user           | varchar(255)   | No     |             | NULL     |                                  |
 | pass           | varchar(255)   | No     |             | NULL     |                                  |
@@ -39,7 +39,7 @@ To edit this model and the necessary properties, edit the file in `back/model/ad
 The reservation model is used to save all the reservations
 For this model is necessary to have a table called "reservations" with this properties:
 | Field                        | Type               | Null   | Key       | Default | Extra                          |
-| :-----------               | :------             | :------| :-------  | :------    | :----------                  |
+| -----------               | ------             | ------| -------  | ------    | ----------                  |
 | ID                             | int(11)            | No     | PRI       | NULL     | auto_increment        |
 | name                       | varchar(255)   | No     |             | NULL     |                                  |
 | secondName           | varchar(255)   | No     |             | NULL     |                                  |
