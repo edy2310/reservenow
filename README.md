@@ -26,17 +26,12 @@ To test the DB connection, import the sequelize object from `back/bin/db_connect
 
 The admin model is used to sign in into the dashboard
 For this model is necessary to have a table called "admin" with this properties:
-| Field          | Type               | Null   | Key       | Default | Extra                         |
-| --- | ---             |---| ---  | ---    | ---                |
-| id               | int(11)            | No     | PRI       | NULL     | auto_increment        |
-| user           | varchar(255)   | No     |             | NULL     |                                  |
-| pass           | varchar(255)   | No     |             | NULL     |                                  |
 
 | Field  | Type | Null  | Key | Default  | Extra |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | id  | int(11)    | No  | PRI  | NULL  | auto_increment |    
-| user  | varchar(255)   |
-| pass  | varchar(255)   |
+| user  | varchar(255)   | No  |   | NULL  |  |    
+| pass  | varchar(255)   | No  |   | NULL  |  |    
 
 To edit this model and the necessary properties, edit the file in `back/model/admin.js`, where is defined this model.
 
