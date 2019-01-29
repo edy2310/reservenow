@@ -1,3 +1,7 @@
+# Intro
+ReserveNow is an open-source project that facilitates the integration of reservations in your website.
+Made with Angular, Node, Express, MySql and Sequelize.
+
 # Back
 
 Backend documenation of ReserveNow! project.
